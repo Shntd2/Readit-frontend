@@ -1,29 +1,55 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+	/* Colors */
+	--black: #0b0b0b;
+	--primary-background: #ffffff;
+	--secondary-background: #ffebee;
+	--active-notification-background: #1f1bc6;
+	--sidebar-and-table-header-text-color: #464646;
+	--sidebar-border: #d0d7de;
+	--separator-and-border: #e6e6e6;
+	--divider: #9f9f9f;
+	--half-transparent: #909090; /* borders and timestamps */
+	--transparent: #646464; /* for transparent (not active) text */
+	--bold-border: #292929; /* for bold borders */
+	--active-link-background: #f8f9fc;
+	--active-link-text: #1611c4;
+  --active-link-text-hover: #535bf2;
+  --button: #1a1a1a;
+	--button-hover: #646cff;
+	--table-header-background: #e9e9ed;
+	--error-message: #c62828;
+	--error-message-background: #ef9a9a;
+	--box-border: rgba(41, 41, 41, 0.08);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	/* Font properties */
+	--font-header1: 32px;
+  --font-header2: 24px;
+  --font-header3: 20px;
+	--font-middle: 16px;
+	--font-small: 14px;
+	--font-xsmall: 12px;
+	--font-sidebar: 18px;
+	--font-style-normal: normal;
+	--font-weight-normal: 500;
+	--font-weight-light: 400;
+	--font-weight-header: 700;
+	--primary-line-height: 25px;
+	--table-line-height: 20px;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
+  font-weight: var(--font-weight-normal);
+  color: var(--active-link-text);
   text-decoration: inherit;
 }
+
 a:hover {
-  color: #535bf2;
+  color: var(--active-link-text-hover);
 }
 
 html, 
 body {
+  background: var(--primary-background);
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -33,8 +59,24 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: var(--font-header1);
   line-height: 1.1;
+}
+
+h2  {
+  font-size: var(--font-header2);
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: var(--font-header3);
+  line-height: 1.1;
+}
+
+p {
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-header);
+  font-size: var(--font-middle);
 }
 
 button {
@@ -44,13 +86,16 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--button);
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: var(--button-hover);
+
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
