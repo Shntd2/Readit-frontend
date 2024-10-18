@@ -34,7 +34,7 @@ api.interceptors.response.use(
 
       try {
         const refreshToken = Cookies.get('refreshToken');
-        const response = await instance.post('/user/refresh', { refreshToken });
+        const response = await api.post('/user/refresh', { refreshToken });
         const { accessToken } = response.data;
 
         Cookies.set('accessToken', accessToken, { expires: 1 });
